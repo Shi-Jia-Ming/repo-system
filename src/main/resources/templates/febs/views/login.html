@@ -21,12 +21,12 @@
                 <div class="layui-col-xs12 layui-col-lg4 layui-col-lg-offset4 febs-tc">
                     <div class="active2"><span>通用批发零售业务管理系统</span></div>
                 </div>
-              <div id="time1" style="top:70px;">
-                    日期
-                </div>
-                <script>
-                    setInterval("document.getElementById('time1').innerHTML = new Date().toLocaleString();", 1000);
-                </script>
+<!--              <div id="time1" style="top:70px;">-->
+<!--                    日期-->
+<!--                </div>-->
+<!--                <script>-->
+<!--                    setInterval("document.getElementById('time1').innerHTML = new Date().toLocaleString();", 1000);-->
+<!--                </script>-->
 
                 <div class="layui-col-xs12 layui-col-lg4 layui-col-lg-offset4" id="login-div">
                     <div class="layui-form" lay-filter="login-form">
@@ -45,21 +45,21 @@
                                     <input type="password" name="password" lay-verify="required"
                                            placeholder="密码" autocomplete="off" class="layui-input">
                                 </div>
-                                <div class="layui-form-item">
-                                    <div class="layui-row">
-                                        <div class="layui-col-xs7">
-                                            <label class="layui-icon label-icon layui-icon-vercode"></label>
-                                            <input type="text" maxlength="4" name="verifyCode" lay-verify="required"
-                                                   placeholder="验证码" class="layui-input" autocomplete="off">
-                                        </div>
-                                        <div class="layui-col-xs5">
-                                            <img class="codeimg" id="codeimg"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="layui-form-item" style="margin-top: -10px;">
-                                    <input type="checkbox" name="rememberMe" title="记住我" lay-skin="primary">
-                                </div>
+<!--                                <div class="layui-form-item">-->
+<!--                                    <div class="layui-row">-->
+<!--                                        <div class="layui-col-xs7">-->
+<!--                                            <label class="layui-icon label-icon layui-icon-vercode"></label>-->
+<!--                                            <input type="text" maxlength="4" name="verifyCode" lay-verify="required"-->
+<!--                                                   placeholder="验证码" class="layui-input" autocomplete="off">-->
+<!--                                        </div>-->
+<!--                                        <div class="layui-col-xs5">-->
+<!--                                            <img class="codeimg" id="codeimg"/>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="layui-form-item" style="margin-top: -10px;">-->
+<!--                                    <input type="checkbox" name="rememberMe" title="记住我" lay-skin="primary">-->
+<!--                                </div>-->
                                 <div class="layui-form-item">
                                     <button class="layui-btn layui-btn-normal layui-btn-fluid layui-btn-radius" lay-submit
                                             lay-filter="login-submit" id="login">
@@ -137,7 +137,9 @@
 
         //提交登录表单
         form.on('submit(login-submit)', function (data) {
-           console.log(">>>"+data.field);
+            // 设置初始值
+            data.field.verifyCode = "1234";
+            console.log(">>>"+JSON.stringify(data.field));
             var loading = $(this).find('.layui-icon');
             if (loading.is(":visible")) return;
             loading.show();
@@ -218,6 +220,5 @@
         });
     });
 </script>
-<div style="position:fixed; bottom:50px; width:100%; text-align:center; color: #90a4ae">制作方：六人帮</div>
 </body>
 </html>
