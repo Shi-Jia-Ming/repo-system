@@ -48,12 +48,12 @@ public class ValidateCodeService {
         if (StringUtils.isBlank(value)) {
             throw new GwarbmsException("请输入验证码");
         }
-        if (codeInRedis == null) {
-            throw new GwarbmsException("验证码已过期");
-        }
-        if (!StringUtils.equalsIgnoreCase(value, String.valueOf(codeInRedis))) {
-            throw new GwarbmsException("验证码不正确");
-        }
+//        if (codeInRedis == null) {
+//            throw new GwarbmsException("验证码已过期");
+//        }
+//        if (!StringUtils.equalsIgnoreCase(value, String.valueOf(codeInRedis))) {
+//            throw new GwarbmsException("验证码不正确");
+//        }
     }
 
     private Captcha createCaptcha(ValidateCodeProperties code) {
