@@ -26,7 +26,7 @@
                     <dl class="layui-nav-child">
                         <dd><a class="layui-nav-child-href" id="user-profile">个人中心</a></dd>
                         <dd><a class="layui-nav-child-href" id="password-update">密码修改</a></dd>
-                        <dd><a class="layui-nav-child-href" target="_blank" href="https://github.com/wuyouzhuguli/FEBS-Shiro">项目地址</a></dd>
+<!--                        <dd><a class="layui-nav-child-href" target="_blank" href="https://github.com/wuyouzhuguli/FEBS-Shiro">项目地址</a></dd>-->
                         <hr/>
                         <dd><a class="layui-nav-child-href" data-th-href="@{logout}">退出登录</a></dd>
                     </dl>
@@ -39,22 +39,22 @@
         <script type="text/html" id="TPL-app-tabsmenu" template>
             {{# if(layui.conf.viewTabs){ }}
             <div class="febs-tabs-wrap">
-          <span class="febs-tabs-btn febs-tabs-action febs-tabs-prev" data-type="prev">
-              <i class="layui-icon layui-icon-left"></i>
-          </span>
-                <span class="febs-tabs-btn febs-tabs-action febs-tabs-next" data-type="next">
-              <i class="layui-icon layui-icon-right"></i>
-          </span>
-                <span class="febs-tabs-btn febs-tabs-action febs-tabs-down" data-type="down">
-              <i class="layui-icon layui-icon-close"></i>
-          </span>
-                <ul class="febs-tabs-menu">
-                    {{# layui.each(layui.view.tab.data,function(i, item){ }}
-                    <li data-type="page" class="febs-tabs-btn" lay-url="{{item.fileurl}}">
-                        <i class="febs-tabs-ball"></i>{{ item.title }}<b class="layui-icon layui-icon-close febs-tabs-close"></b>
-                    </li>
-                    {{# }) }}
-                </ul>
+<!--          <span class="febs-tabs-btn febs-tabs-action febs-tabs-prev" data-type="prev">-->
+<!--              <i class="layui-icon layui-icon-left"></i>-->
+<!--          </span>-->
+<!--                <span class="febs-tabs-btn febs-tabs-action febs-tabs-next" data-type="next">-->
+<!--              <i class="layui-icon layui-icon-right"></i>-->
+<!--          </span>-->
+<!--                <span class="febs-tabs-btn febs-tabs-action febs-tabs-down" data-type="down">-->
+<!--              <i class="layui-icon layui-icon-close"></i>-->
+<!--          </span>-->
+<!--                <ul class="febs-tabs-menu">-->
+<!--                    {{# layui.each(layui.view.tab.data,function(i, item){ }}-->
+<!--                    <li data-type="page" class="febs-tabs-btn" lay-url="{{item.fileurl}}">-->
+<!--                        <i class="febs-tabs-ball"></i>{{ item.title }}<b class="layui-icon layui-icon-close febs-tabs-close"></b>-->
+<!--                    </li>-->
+<!--                    {{# }) }}-->
+<!--                </ul>-->
             </div>
             {{# } }}
         </script>
